@@ -1,83 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GreenStead</title>
-    <link rel="stylesheet" href="style.css">
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--=============== CSS ===================-->
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Hero Start -->
-     <section id="home" class="hero">
-        <img src="pexels-clubhouseconvos-13620071.jpg" alt="">
+    <section id="home" class="hero">
+      <img src="pexels-clubhouseconvos-13620071.jpg" alt="" />
 
-        <header class="navbar">
-            <div class="logo">EverGreen</div>
-            <nav class="nav-menu">
-                <ul class="nav-ul">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#property-list">Property List</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="credentials">
-                <div class="lang"></div>
-                <button class="sign-up button1">Sign Up</button>
-            </div>
-        </header>
-
-        <div class="content-wrapper">
-            <div class="selection-holder">
-                <ul class="flex">
-                    <li><a href="">House</a></li>
-                    <li><a href="">Apartment</a></li>
-                    <li><a href="">Residential</a></li>
-                </ul>
-            </div>
-            <div class="centrepiece flex fg aid">
-                <h2 class="heading">Build Your Future, One Property at a Time.</h2>
-                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, commodi! Unde esse eos maxime Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ducimus.</p>
-            </div>
-            <div class="filter-modal">
-                <h3>Find the best place</h3>
-                <form action="" class="filter-choices flex fg">
-                    <!-- Type -->
-                    <div class="filter-choice fcol">
-                        <label for="type">Looking for</label>
-                        <input type="text" placeholder="Enter Type">
-                    </div>
-                    <div class="filter-choice fcol">
-                        <label for="type">Price</label>
-                        <input type="text" placeholder="Price">
-                    </div>
-                    <div class="filter-choice fcol">
-                        <label for="type">Locations</label>
-                        <input type="number" placeholder="Location">
-                    </div>
-                    <div class="filter-choice fcol">
-                        <label for="type">Number of rooms</label>
-                        <input type="text" placeholder="2 Bed rooms">
-                    </div>
-                </form>
-                <div class="bottom flex jcsb">
-                    <div class="filter flex aic">
-                        <h3>Filter:</h3>
-                        <ul class="flex filter-list">
-                            <li><a href="">City</a></li>
-                            <li><a href="">House</a></li>
-                            <li><a href="">Residential</a></li>
-                            <li><a href="">Apartment</a></li>
-                        </ul>
-                    </div>
-                    <button class="button2">Search Properties</button>
-                </div>
-            </div>
+      <header class="navbar">
+        <div class="logo">EverGreen</div>
+        <nav class="nav-menu">
+          <ul class="nav-ul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#property-list">Property List</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="credentials">
+          <div class="lang"></div>
+          <button class="sign-up button1">Sign Up</button>
         </div>
-     </section>
-     <section id="about"></section>
-     <section id="property-list"></section>
-     <section id="contact"></section>
-</body>
+      </header>
+
+      <div class="content-wrapper">
+        <div class="selection-holder">
+          <ul class="flex">
+            <li><a href="">House</a></li>
+            <li><a href="">Apartment</a></li>
+            <li><a href="">Residential</a></li>
+          </ul>
+        </div>
+        <div class="centrepiece flex fg aid">
+          <h2 class="heading">Build Your Future, One Property at a Time.</h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero,
+            commodi! Unde esse eos maxime Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Reiciendis, ducimus.
+          </p>
+        </div>
+        <div class="filter-modal">
+          <h3>Find the best place</h3>
+          <form action="" class="filter-choices flex fg">
+            <!-- Type -->
+            <div class="filter-choice fcol">
+              <label for="type">Looking for</label>
+              <input type="text" placeholder="Enter Type" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Price</label>
+              <input type="text" placeholder="Price" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Locations</label>
+              <input type="number" placeholder="Location" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Number of rooms</label>
+              <input type="text" placeholder="2 Bed rooms" />
+            </div>
+          </form>
+          <div class="bottom flex jcsb">
+            <div class="filter flex aic">
+              <h3>Filter:</h3>
+              <ul class="flex filter-list">
+                <li><a href="">City</a></li>
+                <li><a href="">House</a></li>
+                <li><a href="">Residential</a></li>
+                <li><a href="">Apartment</a></li>
+              </ul>
+            </div>
+            <button class="button2">Search Properties</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-container">
+        <div class="header flex">
+          <h2>Your primary home might begin to feel left out</h2>
+          <div class="right flex aic">
+            <div class="img-div"></div>
+            <img src="pexels-clubhouseconvos-13620071.jpg" alt="" />
+            <p>
+              Each listing offers unique feature, exceptional quality, and prime
+              locations
+            </p>
+          </div>
+        </div>
+        <div class="bottom flex">
+          <img src="pexels-clubhouseconvos-13620071.jpg" alt="" />
+          <div class="right-wrapper">
+            <div class="big-things">
+              <p>Big things can happen in small spaces.</p>
+              <p>
+                With the thoughtful design and smart organisation, you can
+                maximise every inch,making room for creativity
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="property-list">
+      <div class="properties-container">
+        <div class="heading">
+          <h2 class="heading-h2">Explore our premium houses</h2>
+          <div class="pbut flex jcsb">
+            <p>
+              Each listing offers unique features, exceptional quality and prime
+              locations <br />ensuring an exclusive living experience
+            </p>
+            <button class="button2 button-arrow">See All Properties</button>
+          </div>
+        </div>
+
+        <template id="property-template">
+          <div class="property-card">
+            <div class="property-image">
+              <img src="{{property.imgSrc}}" alt="{{property.title}}" />
+            </div>
+            <span class="sale-status button1">{{property.saleStatus}}</span>
+            <div class="property-details">
+              <span>{{property.bedrooms}} &nbsp;• </span>&nbsp;<span
+                >{{property.bathrooms}}</span
+              >
+              <h3 class="property-title">{{property.title}}</h3>
+              <span><strong>{{property.price}}</strong></span> &nbsp;•&nbsp;
+              <span class="property-address">{{property.address}}</span>
+            </div>
+          </div>
+        </template>
+
+        <div class="properties-wrapper"></div>
+      </div>
+    </section>
+
+    <!-- FAQ START -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <h1 class="faq-title">Frequently <span>Asked</span> Questions</h1>
+        <div class="faq-wrapper" id="faq-wrapper">
+          <div class="faq-item">
+            <div class="question">
+              <h3>What type of properties do you sell?</h3>
+            </div>
+            <div class="answer flex jcsb aic">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                consectetur nam quis vero possimus molestias cupiditate adipisci
+                asperiores vitae omnis obcaecati repellat quas, tempore
+                doloribus, veniam saepe. Minima atque iste ducimus nihil ea
+                repellendus eius, doloremque deleniti ipsa! Corporis quae quod
+                iure numquam possimus eaque. Quisquam nisi accusantium enim
+                dolores eum quae molestiae beatae eaque laboriosam molestias
+                consequatur, corporis aut.
+              </p>
+              <img src="pexels-expect-best-79873-323772.jpg" alt="" />
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="question">
+              <h3>What type of properties do you sell?</h3>
+            </div>
+            <div class="answer flex jcsb aic">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                consectetur nam quis vero possimus molestias cupiditate adipisci
+                asperiores vitae omnis obcaecati repellat quas, tempore
+                doloribus, veniam saepe. Minima atque iste ducimus nihil ea
+                repellendus eius, doloremque deleniti ipsa! Corporis quae quod
+                iure numquam possimus eaque. Quisquam nisi accusantium enim
+                dolores eum quae molestiae beatae eaque laboriosam molestias
+                consequatur, corporis aut.
+              </p>
+              <img src="pexels-pacific-2179747.jpg" alt="" />
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="question">
+              <h3>What type of properties do you sell?</h3>
+            </div>
+            <div class="answer flex jcsb aic">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+                consectetur nam quis vero possimus molestias cupiditate adipisci
+                asperiores vitae omnis obcaecati repellat quas, tempore
+                doloribus, veniam saepe. Minima atque iste ducimus nihil ea
+                repellendus eius, doloremque deleniti ipsa! Corporis quae quod
+                iure numquam possimus eaque. Quisquam nisi accusantium enim
+                dolores eum quae molestiae beatae eaque laboriosam molestias
+                consequatur, corporis aut.
+              </p>
+              <img src="pexels-pacific-2179747.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ END -->
+
+    <!-- TESTIMONIALS START -->
+
+    <!-- TESTIMONIALS END -->
+    <section id="contact"></section>
+  </body>
 </html>
