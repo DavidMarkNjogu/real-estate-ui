@@ -75,8 +75,8 @@
               <input type="text" placeholder="2 Bed rooms" />
             </div>
           </form>
-          <div class="bottom flex jcsb">
-            <div class="filter flex aic">
+          <div class="bottom flex ais jcsb">
+            <div class="filter flex ais">
               <h3>Filter:</h3>
               <ul class="flex filter-list">
                 <li><a href="">City</a></li>
@@ -105,19 +105,30 @@
         </div>
         <div class="bottom flex">
           <img src="pexels-clubhouseconvos-13620071.jpg" alt="" />
-          <div class="right-wrapper">
-            <div class="big-things">
-              <p>Big things can happen in small spaces.</p>
-              <p>
-                With the thoughtful design and smart organisation, you can
-                maximise every inch,making room for creativity
-              </p>
+          <div class="right-wrapper flex fcol">
+            <div class="top flex">   
+              <div class="big-things flex fcol aic jcsb">
+                <h3>Big things can happen in small spaces.</h3>
+                <p>
+                  With the thoughtful design and smart organisation, you can
+                  maximise every inch,making room for creativity
+                </p>
+                <button class="button3">Details</button>
+              </div>
+              <div class="pricing flex fcol aic">
+                <img src="pexels-pacific-2179747.jpg" alt="">
+                <p>Pricing starts at $256K</p>
+                <button class="button2 button-arrow">Explore Properties</button>
+              </div>
+            </div>
+            <div class="bottom">
+              <p>Whether it's creating a cozy corner for relaxation or transforming a small area into a workspace</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="property-list">
+    <section id="property-list" class="properties">
       <div class="properties-container">
         <div class="heading">
           <h2 class="heading-h2">Explore our premium houses</h2>
@@ -215,9 +226,168 @@
     </section>
     <!-- FAQ END -->
 
-    <!-- TESTIMONIALS START -->
+     <section class="testimonial">
+         <h2 class="testimonial__title">WHAT <br> CUSTOMERS SAY</h2>
 
-    <!-- TESTIMONIALS END -->
+         <div class="testimonial__swiper container swiper">
+            <div class="swiper-wrapper">
+               <article class="testimonial__card swiper-slide">
+                  <img src="assets/img/avatar-1.png" alt="image" class="testimonial__img">
+   
+                  <h3 class="testimonial__name">Damyz Julz</h3>
+   
+                  <div class="testimonial__rating">
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+   
+                     <h3 class="testimonial__number">5.0</h3>
+                  </div>
+   
+                  <p class="testimonial__description">
+                     The company offers many easy-to-use services, 
+                     with hard work and round-the-clock support 
+                     on all projects.
+                  </p>
+               </article>
+   
+               <article class="testimonial__card swiper-slide">
+                  <img src="assets/img/avatar-2.png" alt="image" class="testimonial__img">
+   
+                  <h3 class="testimonial__name">Taylor Carter</h3>
+   
+                  <div class="testimonial__rating">
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+   
+                     <h3 class="testimonial__number">5.0</h3>
+                  </div>
+   
+                  <p class="testimonial__description">
+                     The company offers many easy-to-use services, 
+                     with hard work and round-the-clock support 
+                     on all projects.
+                  </p>
+               </article>
+   
+               <article class="testimonial__card swiper-slide">
+                  <img src="assets/img/avatar-3.png" alt="image" class="testimonial__img">
+   
+                  <h3 class="testimonial__name">Rina Ownel</h3>
+   
+                  <div class="testimonial__rating">
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+   
+                     <h3 class="testimonial__number">5.0</h3>
+                  </div>
+   
+                  <p class="testimonial__description">
+                     The company offers many easy-to-use services, 
+                     with hard work and round-the-clock support 
+                     on all projects.
+                  </p>
+               </article>
+   
+               <article class="testimonial__card swiper-slide">
+                  <img src="assets/img/avatar-4.png" alt="image" class="testimonial__img">
+   
+                  <h3 class="testimonial__name">Jhon Patel</h3>
+   
+                  <div class="testimonial__rating">
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+   
+                     <h3 class="testimonial__number">5.0</h3>
+                  </div>
+   
+                  <p class="testimonial__description">
+                     The company offers many easy-to-use services, 
+                     with hard work and round-the-clock support 
+                     on all projects.
+                  </p>
+               </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"><i class="ri-arrow-left-long-line"></i></div>
+            <div class="swiper-button-next"><i class="ri-arrow-right-long-line"></i></div>
+         </div>
+      </section>
+      
+
+      <section class="cta">
+        <div class="overlay"></div>
+        <div class="cta-container">
+          <h2 class="cta-title">Ready to Make Your Dream Property a Reality?</h2>
+          <p class="cta-p">Export a curated selection of properties that align with your vision and goals</p>
+          <button class="button2 button-arrow">Get Started</button>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-container flex fcol jcsb">
+          <div class="top flex aic jcsb">
+            <h2 class="footer-title">Discover Nature's <span>Wonders <br>With Expert Guidance</span></h2>
+            <p>12356 Main St., Gooding Jr Road,Kenya</p>                                                                                                                                                                                                                                                                                                                                     
+          </div>
+          <hr>
+          <nav class="footer-nav flex jcsb aic">
+            <nav class="nav-ul">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#property-list">Properties</a></li>
+              <li><a href="#contact">Services</a></li>
+            </nav>
+            <div class="logo">EverGreen</div>
+            <div class="nav-ul">
+              <li><a href="">Gallery</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Pricing</a></li>
+              <li><a href="">Contact</a></li>
+            </div>
+          </nav>
+          <hr>
+          <div class="footnote flex aic jcsb">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> EverGreen. All Rights Reserved</p>
+            <p>Terms & Conditions | Privacy pilocy</p>
+          </div>
+        </div>
+      </footer>
+
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
     <section id="contact"></section>
+ 
+   <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+          <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
   </body>
 </html>

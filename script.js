@@ -1,3 +1,10 @@
+// Copyright year
+function year() {
+  date = new Date().getFullYear();
+  return date;
+}
+
+
 // SECTION NAVING---NAVIGATION ie.\
 
 const sections = document.querySelectorAll('section');

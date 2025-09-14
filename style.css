@@ -46,7 +46,7 @@
 /* GLOBAL STYLES */
 html {
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 body{
@@ -60,7 +60,7 @@ img{
 }
 a{
     text-decoration: none;
-    color: var(--white);
+    /* color: var(--white); */
 }
 
 /* RE-USED STYLES */
@@ -148,12 +148,16 @@ a{
 .aid{
     align-items: end;
 }
+.ais{
+    align-items: stretch;
+}
 .jcc{
     justify-content: center;
 }
 .jcsb{
     justify-content: space-between;
 }
+
     /* ====================================================== */
 
     /* =================== ANIMATIONS ======================= */ 
@@ -349,6 +353,7 @@ a{
     line-height: 50px;
     height: 50px;
     padding: 0 10px;
+    color: var(--white);
 }
 .nav-ul li:hover{
     background-color: var(--white);
@@ -503,9 +508,10 @@ li.active a {
     /* height: max-content; */
     margin-inline: auto;
     /* position: relative; */
+    padding: 40px 0;
 }
 .about-container .header{
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 .about-container .header h2{
     font-size: var(--h21);
@@ -533,27 +539,76 @@ li.active a {
 }
 .about-container .bottom{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     gap: 20px;
 }
 .bottom img{
-    width: 150px;
-    height: 100px;
-    margin-right: 400px;
+    flex: 1 1 55%;
+    width: 600px;
+    height: 550px;
+    /* margin-right: 400px; */
+    border-radius: 40px;
+}
+.right-wrapper{
+    flex: 1 1 40%;
+    width: 45%;
+    height: 550px;
+    gap: 30px;
+}
+.top{
+    height: 70%;
+    /* display: flex; */
+    justify-content: space-between;
+    gap: 30px;
+    /* align-items: flex-end; */
+    /* background-color: red; */
 }
 .big-things{
     background-color: var(--gray);
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 80px 5px;
+    border-radius: 30px;
+    /* display: inline-block; */
+}
+.big-things p{
+    font-size: 12px;
+}
+.pricing{
+    background-color: var(--gray);
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* background-color: blue; */
+    width: 50%;
+    align-self: flex-end;
+    border-radius: 30px;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+.pricing img{
+    width: 100%;
+    max-height: 60%;
+}
+.bottom .bottom p{
+    width: 35ch;
 }
 
 
-
-
 /* SECTION 3 */
+.properties{
+    background-color: whitesmoke;
+}
 .properties-container{
     max-width: 96%;
     min-height: 100vh;
     margin-inline: auto;
+    padding: 40px;
 }
 .heading h2{
     font-size: var(--h2);
@@ -749,8 +804,90 @@ li.active a {
 
 
 
+/* CTA START  */
+.cta{
+    width: 100%;
+    background-image: url(pexels-expect-best-79873-323772.jpg);
+    background-position: center center;
+    background-size: cover;
+    max-height: 70vh;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+.cta-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    z-index: 2;
+}
+.cta .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    /* top: 0; */
+    background-color:rgba(0, 0, 0, 0.699);
+    z-index: 1;
+    max-height: 70vh;
 
 
+}
+.cta-title{
+    width: 20ch;
+    font-size: var(--h21);
+    margin: 20px 0;
+    color: var(--white);
+}
+/* CTA END  */
+
+/* FOOTER START */
+.footer{
+    width: 100%;
+    position: relative;
+    /* background-color: rebeccapurple; */
+}
+.footer-container{
+    /* max-width: 96%; */
+    /* margin-inline: auto; */
+    padding: 30px 50px;
+}
+.footer-title{
+    font-size: var(--h21);
+}
+.footer-nav{
+    /* border-bottom: 2px solid var(--light-gray); */
+    /* border-top: 2px solid var(--light-gray); */
+}
+.footer .nav-ul{
+    display: flex;
+
+}
+.footer .nav-ul li a{
+    color: inherit;
+}
+
+.footer .footnote p{
+    font-size: 14px;
+    color: var(--light-gray);
+}
+.footer hr{
+    width: 100vw;
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    margin: unset;
+}
+/* FOOTER END */
 
 
 

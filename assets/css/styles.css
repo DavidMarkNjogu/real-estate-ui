@@ -42,16 +42,15 @@
   margin: 0;
 }
 
-body {
+.testimonial {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--second-font);
-  color: var(--title-color);
+.testimonial h1, h2, h3, h4 {
+ 
 }
 
 a {
@@ -72,12 +71,14 @@ img {
 
 /*=============== TESTIMONIAL CARD ===============*/
 .testimonial {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  padding: 40px 0;
+  background-color: whitesmoke;
+  /* overflow: hidden; */
 }
 
 .testimonial__swiper {
@@ -88,6 +89,8 @@ img {
   font-size: var(--h1-font-size);
   text-align: center;
   margin-bottom: 3rem;
+  font-family: var(--second-font);
+  color: var(--title-color);
 }
 
 .testimonial__card {

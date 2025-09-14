@@ -4,7 +4,7 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
    slidesPerView: 'auto',
    centeredSlides: 'auto',
    spaceBetween: 16,
-   grabCursor: true,
+   grabCursor: false,
    speed: 600,
    effect: 'coverflow',
    coverflowEffect:{
