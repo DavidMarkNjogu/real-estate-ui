@@ -1117,6 +1117,7 @@ li.active a {
 .faq-title{
     font-size: 3rem;
     margin: 2rem 0;
+    text-align: center;
 }
 .faq-wrapper{
     width: 80%;
