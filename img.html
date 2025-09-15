@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYLe>
+    *{
+        margin: 0;
+    }
+    .bg{
+        background-image: url(pexels-clubhouseconvos-13620071\ -\ large.jpg);
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        /* position: absolute; */
+        /* top: 0; */
+        /* z-index: -2; */
+
+
+    }
+    @media (max-width: 1024px) {
+  .bg {
+    background-image: url("pexels-clubhouseconvos-13620071 - medium.jpg");
+  }
+}
+
+@media (max-width: 480px) {
+  .bg {
+    background-image: url("pexels-clubhouseconvos-13620071 - small.jpg");
+  }
+}
+</STYLe>
+<body>
+    <div class="bg"></div>
+</body>
+</html>

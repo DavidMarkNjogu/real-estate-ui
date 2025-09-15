@@ -4,6 +4,54 @@ function year() {
   return date;
 }
 
+// HAMBURGER TOGGLING
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+   if (!navMenu.classList.contains('transition-enabled')) {
+    navMenu.classList.add('transition-enabled');
+  }
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+
+window.addEventListener('load', () => {
+    document.querySelector('.nav-menu').classList.remove('no-transition');
+});
+
+//Close menu on window resize above mobile breakpoint
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+// Close mobile menu on clicking outside
+document.addEventListener('click', (event) => {
+  const isClickInsideMenu = navMenu.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  console.log(event.pageY)
+  if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+
+// NAVBAR BG CHANGE ON SCROLL
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > navbar.clientHeight){
+    navbar.classList.add('scrolled')
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+})
 
 // SECTION NAVING---NAVIGATION ie.\
 
