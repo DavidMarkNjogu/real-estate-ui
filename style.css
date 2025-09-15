@@ -994,13 +994,14 @@ li.active a {
     background-color: whitesmoke;
 }
 .properties-container{
-    max-width: 96%;
+    max-width: 1440px;
+    width: 96%;
     min-height: 100vh;
     margin-inline: auto;
     padding: 40px;
 }
 .heading h2{
-    font-size: var(--h2);
+    font-size: var(--h21);
 }
 
 .properties-wrapper{
@@ -1059,7 +1060,50 @@ li.active a {
     cursor: pointer;
 }
 
-
+@media(max-width: 900px){
+    .properties-wrapper{
+        grid-template-columns: auto auto;
+    }
+    .heading h2{
+        min-width: auto;
+    }
+    .heading p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 768px){
+    .properties-wrapper{
+        grid-template-columns: auto;
+    }
+    .heading{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .heading p{
+        font-size: 12px;
+    }
+    .pbut{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    .pbut button{
+        width: max-content;
+    }
+}
+@media(max-width: 600px){
+    .properties-container{
+        width: 98%;
+        padding: 40px 10px;
+    }
+}
+@media(max-width: 480px){
+    .properties-container{
+        width: 100%;
+        padding: 30px 5px;
+    } 
+}
 
 /* FAQ START */
 .faq-section{
