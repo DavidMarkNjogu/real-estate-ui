@@ -15,7 +15,7 @@
   --gray: #f8f8f8;
   --lighter-gray: #f2f2f2;
   --light-gray: #a4a8a9;
-  --light-green: #ace279;
+  --light-green: #89fc00;
   --light-green-hover: #c4e2a1;
   --dark-green-1: #749a3e; /* medium dark green */
   --dark-green-2: #5a7a30; /* darker olive green */
@@ -1679,6 +1679,7 @@ li.active a {
   font-weight: 500;
   /* font-size: 1.6rem; */
   letter-spacing: 2px;
+  color: var(--light-green);
   /* color: #4caf50; */
 }
 .footer .footnote p {
