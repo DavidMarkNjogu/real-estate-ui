@@ -433,30 +433,85 @@ const allCardsHTML = properties
 container.innerHTML = allCardsHTML;
 
 // FAQ
-const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach((faq) => {
-  faq.addEventListener("click", () => {
-    const answer = faq.querySelector(".answer");
+const faqData = [
+  {
+    question: "How do you verify the authenticity of property listings?",
+    answer: "All property listings go through a thorough verification process including document checks and agent validation to ensure every listing is genuine and trustworthy.",
+  },
+  {
+    question: "What measures do you take to protect buyer and seller information?",
+    answer: "We implement top-tier encryption and data privacy protocols to safeguard your personal and financial information throughout all transactions on our platform.",
+  },
+  {
+    question: "Can I get professional advice or consultation through the platform?",
+    answer: "Yes, we offer access to certified real estate consultants who can provide tailored advice to help you make informed decisions.",
+  },
+  {
+    question: "How do you handle disputes or issues between buyers and sellers?",
+    answer: "Our platform includes a dedicated support team that mediates disputes and provides assistance to resolve conflicts fairly and efficiently.",
+  },
+  {
+    question: "Are the property prices on your platform negotiable or fixed?",
+    answer: "Prices depend on the seller, but many listings allow negotiations. We provide tools and tips to help you negotiate effectively with sellers or agents.",
+  },
+  {
+    question: "Do you offer any guarantees or protections for online transactions?",
+    answer: "Yes. We use trusted escrow services and secure payment gateways to protect both buyers and sellers during financial transactions.",
+  },
+  {
+    question: "How can I be sure the property matches the description and images shown?",
+    answer: "We encourage on-site inspections and provide verified virtual tours to ensure the property details and visuals are accurate before purchase.",
+  },
+  {
+    question: "What local market insights or data do you provide to help with my purchase decision?",
+    answer: "Our platform offers comprehensive market analysis, neighborhood ratings, price trends, and other local insights to inform your investment choices.",
+  },
+  {
+    question: "How quickly can I expect a response from agents or sellers after contacting them?",
+    answer: "We monitor responsiveness and provide estimated reply times, helping ensure timely communication to keep your buying process moving smoothly.",
+  }
+];
 
-    if (faq.classList.contains("active")) {
-      // Collapse: remove maxHeight and padding
-      answer.style.maxHeight = null;
-      answer.style.paddingTop = 0;
-      answer.style.paddingBottom = 0;
-      faq.classList.remove("active");
-    } else {
-      // Expand: set padding BEFORE maxHeight
-      answer.style.paddingTop = "20px";  // use CSS padding value
-      answer.style.paddingBottom = "20px";
-      answer.style.maxHeight = answer.scrollHeight + "px";
-      faq.classList.add("active");
-    }
 
-    document.querySelectorAll(".answer").forEach((answerEl) => {
-      answerEl.classList.add("fade");
+  const FaqTemplateStr = document.getElementById("faq-template").innerHTML;
+  const FaqContainer = document.getElementById("faq-container-wrap");
+
+  FaqContainer.innerHTML = faqData.map(faq => {
+    return FaqTemplateStr
+      .replaceAll("{{question}}", faq.question)
+      .replaceAll("{{answer}}", faq.answer)
+      .replaceAll("{{imgSrc}}", faq.imgSrc);
+  }).join("");
+
+  // After render, add event listeners for toggling
+  const faqItems = FaqContainer.querySelectorAll(".faq-item");
+  
+  faqItems.forEach((faqItem) => {
+    const question = faqItem.querySelector(".question");
+    const answer = faqItem.querySelector(".answer");
+
+    question.addEventListener("click", () => {
+      const isActive = faqItem.classList.contains("active");
+      if (isActive) {
+        // Collapse answer
+        answer.style.maxHeight = "0";
+        answer.style.paddingTop = "0";
+        answer.style.paddingBottom = "0";
+        faqItem.classList.remove("active");
+      } else {
+        // Expand answer - set padding first for smooth animation
+        answer.style.paddingTop = "20px";
+        answer.style.paddingBottom = "20px";
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        faqItem.classList.add("active");
+      }
+
+      document.querySelectorAll(".answer").forEach((answerEl) => {
+        answerEl.classList.add("fade");
     });
   });
 });
+
 
 

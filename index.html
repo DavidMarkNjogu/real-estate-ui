@@ -260,53 +260,7 @@
   </div>
 </template>
 
-<script>
-  const faqData = [
-    {
-      question: "What type of properties do you sell?",
-      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum consectetur nam quis vero possimus molestias cupiditate adipisci asperiores vitae omnis obcaecati repellat quas, tempore doloribus, veniam saepe.`,
-    },
-    {
-      question: "Can I use Coolhome for free?",
-      answer: "Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.",
-    }
-  ];
 
-  const templateStr = document.getElementById("faq-template").innerHTML;
-  const container = document.getElementById("faq-container-wrap");
-
-  container.innerHTML = faqData.map(faq => {
-    return templateStr
-      .replaceAll("{{question}}", faq.question)
-      .replaceAll("{{answer}}", faq.answer)
-      .replaceAll("{{imgSrc}}", faq.imgSrc);
-  }).join("");
-
-  // After render, add event listeners for toggling
-  const faqItems = container.querySelectorAll(".faq-item");
-  
-  faqItems.forEach((faqItem) => {
-    const question = faqItem.querySelector(".question");
-    const answer = faqItem.querySelector(".answer");
-
-    question.addEventListener("click", () => {
-      const isActive = faqItem.classList.contains("active");
-      if (isActive) {
-        // Collapse answer
-        answer.style.maxHeight = "0";
-        answer.style.paddingTop = "0";
-        answer.style.paddingBottom = "0";
-        faqItem.classList.remove("active");
-      } else {
-        // Expand answer - set padding first for smooth animation
-        answer.style.paddingTop = "20px";
-        answer.style.paddingBottom = "20px";
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        faqItem.classList.add("active");
-      }
-    });
-  });
-</script>
 
 <template id="faq-item-template">
   <div class="faq-item">
@@ -317,71 +271,6 @@
     </div>
   </div>
 </template>
-
-<script>
-  const faqData = [
-    {
-      question: "What type of properties do you sell?",
-      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-                consectetur nam quis vero possimus molestias cupiditate adipisci
-                asperiores vitae omnis obcaecati repellat quas, tempore
-                doloribus, veniam saepe. Minima atque iste ducimus nihil ea
-                repellendus eius, doloremque deleniti ipsa! Corporis quae quod
-                iure numquam possimus eaque. Quisquam nisi accusantium enim
-                dolores eum quae molestiae beatae eaque laboriosam molestias
-                consequatur, corporis aut.`,
-      imgSrc: "pexels-expect-best-79873-323772.jpg"
-    },
-    {
-      question: "Can I use Coolhome for free?",
-      answer: "Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.",
-      imgSrc: "pexels-pacific-2179747.jpg"
-    },
-    // Add more items here...
-  ];
-
-  const faqContainer = document.getElementById("faq-container-wrap");
-  const template = document.getElementById("faq-item-template");
-
-  faqData.forEach(({ question, answer, imgSrc }) => {
-    const clone = template.content.cloneNode(true);
-    const faqItem = clone.querySelector(".faq-item");
-    const questionDiv = clone.querySelector(".question");
-    const answerDiv = clone.querySelector(".answer");
-    const p = clone.querySelector("p");
-    const img = clone.querySelector("img");
-
-    questionDiv.textContent = question;
-    p.textContent = answer;
-    img.src = imgSrc;
-
-    // Initialize answer to be collapsed
-    answerDiv.style.maxHeight = "0";
-    answerDiv.style.paddingTop = "0";
-    answerDiv.style.paddingBottom = "0";
-    answerDiv.style.overflow = "hidden";
-    answerDiv.style.transition = "max-height 0.5s ease, padding 0.5s ease";
-
-    questionDiv.addEventListener("click", () => {
-      const isActive = faqItem.classList.contains("active");
-      if (isActive) {
-        // Collapse answer
-        answerDiv.style.maxHeight = "0";
-        answerDiv.style.paddingTop = "0";
-        answerDiv.style.paddingBottom = "0";
-        faqItem.classList.remove("active");
-      } else {
-        // Expand answer
-        answerDiv.style.paddingTop = "20px"; // match CSS padding
-        answerDiv.style.paddingBottom = "20px";
-        answerDiv.style.maxHeight = answerDiv.scrollHeight + "px";
-        faqItem.classList.add("active");
-      }
-    });
-
-    faqContainer.appendChild(clone);
-  });
-</script>
 
   <section class="testimonial">
     <h2 class="testimonial__title fadeUp">What <br>Our Customers Say</h2>
