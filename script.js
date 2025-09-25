@@ -328,8 +328,10 @@ const navbar = document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > navbar.clientHeight) {
-    navbar.classList.add("scrolled");
+    navbar.classList.add("glass-card");
+    navbar.classList.add('scrolled');
   } else {
+    navbar.classList.remove("glass-card");
     navbar.classList.remove("scrolled");
   }
 });
@@ -455,22 +457,22 @@ const faqData = [
     question: "Are the property prices on your platform negotiable or fixed?",
     answer: "Prices depend on the seller, but many listings allow negotiations. We provide tools and tips to help you negotiate effectively with sellers or agents.",
   },
-  {
-    question: "Do you offer any guarantees or protections for online transactions?",
-    answer: "Yes. We use trusted escrow services and secure payment gateways to protect both buyers and sellers during financial transactions.",
-  },
-  {
-    question: "How can I be sure the property matches the description and images shown?",
-    answer: "We encourage on-site inspections and provide verified virtual tours to ensure the property details and visuals are accurate before purchase.",
-  },
-  {
-    question: "What local market insights or data do you provide to help with my purchase decision?",
-    answer: "Our platform offers comprehensive market analysis, neighborhood ratings, price trends, and other local insights to inform your investment choices.",
-  },
-  {
-    question: "How quickly can I expect a response from agents or sellers after contacting them?",
-    answer: "We monitor responsiveness and provide estimated reply times, helping ensure timely communication to keep your buying process moving smoothly.",
-  }
+  // {
+  //   question: "Do you offer any guarantees or protections for online transactions?",
+  //   answer: "Yes. We use trusted escrow services and secure payment gateways to protect both buyers and sellers during financial transactions.",
+  // },
+  // {
+  //   question: "How can I be sure the property matches the description and images shown?",
+  //   answer: "We encourage on-site inspections and provide verified virtual tours to ensure the property details and visuals are accurate before purchase.",
+  // },
+  // {
+  //   question: "What local market insights or data do you provide to help with my purchase decision?",
+  //   answer: "Our platform offers comprehensive market analysis, neighborhood ratings, price trends, and other local insights to inform your investment choices.",
+  // },
+  // {
+  //   question: "How quickly can I expect a response from agents or sellers after contacting them?",
+  //   answer: "We monitor responsiveness and provide estimated reply times, helping ensure timely communication to keep your buying process moving smoothly.",
+  // }
 ];
 
 

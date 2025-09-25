@@ -8,6 +8,9 @@
   <!--=============== REMIXICONS ===============-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
+  <!--=============== FONTAWESOME ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <!--=============== SWIPER CSS ===============-->
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
@@ -22,121 +25,175 @@
 <body>
   <!-- Hero Start -->
   <section id="home" class="hero">
-<img src="pexels-clubhouseconvos-13620071-large.jpg" 
-  srcset="pexels-clubhouseconvos-13620071-small.jpg 640w,
+    <div class="hero-container">
+      <div class="hero-overlay"></div>
+      <img src="pexels-clubhouseconvos-13620071-large.jpg" srcset="pexels-clubhouseconvos-13620071-small.jpg 640w,
           pexels-clubhouseconvos-13620071-medium.jpg 1280w,
-          pexels-clubhouseconvos-13620071-large.jpg 1920w"
-  sizes="(max-width: 480px) 640px,
+          pexels-clubhouseconvos-13620071-large.jpg 1920w" sizes="(max-width: 480px) 640px,
          (max-width: 1024px) 1280px,
          1920px" alt="Hero image">
 
-    <!-- NAVBAR START  -->
-    <nav class="navbar">
-      <div class="logo">Greenstead</div>
+      <!-- NAVBAR START  -->
+      <nav class="navbar">
+        <div class="logo">Greenstead</div>
 
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </div>
-
-      <div class="nav-menu no-transition">
-        <ul class="nav-ul">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#property-list">Property List</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="credentials">
-        <div class="lang"></div>
-        <button class="sign-up button1">Sign Up</button>
-      </div>
-    </nav>
-
-
-    <!-- NAVBAR END -->
-    <div class="content-wrapper">
-      <div class="selection-holder">
-        <ul class="flex">
-          <li><a href="">House</a></li>
-          <li><a href="">Apartment</a></li>
-          <li><a href="">Residential</a></li>
-        </ul>
-      </div>
-      <div class="centrepiece flex fg aic">
-        <h2 class="heading fadeInLeftExtra">Build Your Future, One Property at a Time.</h2>
-        <p class="text fadeInRightExtra">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero,
-          commodi! Unde esse eos maxime Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Reiciendis, ducimus.
-        </p>
-      </div>
-      <div class="filter-modal fadeUp">
-        <h3>Find the best place</h3>
-        <form action="" class="filter-choices flex fg">
-          <!-- Type -->
-          <div class="filter-choice fcol">
-            <label for="type">Looking for</label>
-            <input type="text" placeholder="Enter Type" />
-          </div>
-          <div class="filter-choice fcol">
-            <label for="type">Price</label>
-            <input type="text" placeholder="Price" />
-          </div>
-          <div class="filter-choice fcol">
-            <label for="type">Locations</label>
-            <input type="number" placeholder="Location" />
-          </div>
-          <div class="filter-choice fcol">
-            <label for="type">Number of rooms</label>
-            <input type="text" placeholder="2 Bed rooms" />
-          </div>
-        </form>
-        <div class="bottom flex aic jcsb">
-          <div class="filter flex aic">
-            <h3>Filter:</h3>
-            <ul class="flex filter-list">
-              <li><a href="">City</a></li>
-              <li><a href="">House</a></li>
-              <li><a href="">Residential</a></li>
-              <li><a href="">Apartment</a></li>
-            </ul>
-          </div>
-          <button class="button2 buttonFadeIn">Search Properties</button>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="about-container">
-      <div class="header flex fadeUp">
-        <h2>Your primary home might begin to feel left out</h2>
-        <div class="right flex aic">
-          <div class="img-div"></div>
-          <img src="pexels-clubhouseconvos-13620071.jpg" alt="" />
-          <p>
-            Each listing offers unique feature, exceptional quality, and prime
-            locations
+
+        <div class="nav-menu no-transition">
+          <ul class="nav-ul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#property-list">Property List</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="credentials flex aic jcsb">
+          <div class="lang"></div>
+          <button class="login-btn button-tertiary">Login</button>
+          <button class="sign-up button-primary">Sign Up</button>
+        </div>
+      </nav>
+      <!-- NAVBAR END -->
+
+
+      <div class="content-wrapper">
+        <div class="centerpiece  heading fcol heading-light flex fg aic">
+          <h2 class="hero-heading fadeInLeftExtra">Build Your Future, One Property at a Time.</h2>
+          <p class="hero-p fadeInRightExtra">
+            Discover the power to shape your tomorrow with every property you own. Whether you’re a first-time buyer or
+            a seasoned investor, our expert guidance and tailored solutions will help you unlock new opportunities and
+            build lasting wealth. Step confidently into a future where your dreams take root and flourish, one carefully
+            chosen property at a time.
           </p>
         </div>
+        <!-- <div class="filter-modal fadeUp">
+          <h3>Find the best place</h3>
+          <form action="" class="filter-choices flex fg">
+            <-- Type ->
+            <div class="filter-choice fcol">
+              <label for="type">Looking for</label>
+              <input type="text" placeholder="Enter Type" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Price</label>
+              <input type="text" placeholder="Price" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Locations</label>
+              <input type="number" placeholder="Location" />
+            </div>
+            <div class="filter-choice fcol">
+              <label for="type">Number of rooms</label>
+              <input type="text" placeholder="2 Bed rooms" />
+            </div>
+          </form>
+          <div class="bottom flex aic jcsb">
+            <div class="filter flex aic">
+              <h3>Filter:</h3>
+              <ul class="flex filter-list">
+                <li><a href="">City</a></li>
+                <li><a href="">House</a></li>
+                <li><a href="">Residential</a></li>
+                <li><a href="">Apartment</a></li>
+              </ul>
+            </div>
+            <button class="button-primary">Search Properties</button>
+          </div>
+        </div> -->
+
+        <div class="filter-modal regal-filter fadeUp">
+          <!-- <h3>Find the Best Place</h3> -->
+          <form action="" class="filter-choices flex fg">
+
+            <!-- Location (Dropdown) -->
+            <div class="filter-choice fcol">
+              <label for="location" class="flex aic">
+                <i class="fas fa-map-marker-alt icon"></i> Location
+              </label>
+              <div class="select-wrapper">
+                <select id="location" name="location">
+                  <option value="" disabled selected>Select Location</option>
+                  <option>New York</option>
+                  <option>London</option>
+                  <option>Paris</option>
+                  <option>Tokyo</option>
+                </select>
+                <span class="caret"><i class="fas fa-caret-down"></i></span>
+              </div>
+            </div>
+
+            <!-- Check-in (Input with caret) -->
+            <div class="filter-choice fcol">
+              <label for="checkin" class="flex aic">
+                <i class="fas fa-calendar-alt icon"></i> Check-in
+              </label>
+              <div class="input-wrapper">
+                <input type="date" id="checkin" name="checkin" placeholder="Select date" />
+                <span class="caret"><i class="fas fa-caret-down"></i></span>
+              </div>
+            </div>
+
+            <!-- Check-out (Input with caret) -->
+            <div class="filter-choice fcol">
+              <label for="checkout" class="flex aic">
+                <i class="fas fa-calendar-alt icon"></i> Check-out
+              </label>
+              <div class="input-wrapper">
+                <input type="date" id="checkout" name="checkout" placeholder="Select date" />
+                <span class="caret"><i class="fas fa-caret-down"></i></span>
+              </div>
+            </div>
+
+            <!-- Room & Guests (Dropdown) -->
+            <div class="filter-choice fcol">
+              <label for="occupancy" class="flex aic">
+                <i class="fas fa-bed icon"></i> Rooms & Guests
+              </label>
+              <div class="select-wrapper">
+                <select id="occupancy" name="occupancy">
+                  <option value="" disabled selected>1 room, 1 guest</option>
+                  <option>1 room, 2 guests</option>
+                  <option>2 rooms, 4 guests</option>
+                  <option>3 rooms, 6 guests</option>
+                </select>
+                <span class="caret"><i class="fas fa-caret-down"></i></span>
+              </div>
+            </div>
+
+          </form>
+          <button class="filter-btn button-primary button-big flex aic jcc">
+            <i class="fas fa-search button-icon"></i> Search
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <section id="about">
+    <div class="about-container container">
+      <div class="header flex aic fadeUp">
+        <h2 class="h2">Your primary home might begin to feel left out</h2>
+        <p class="heading-p p1">Each listing offers unique feature, exceptional quality, and prime locations</p>
       </div>
       <div class="bottom flex">
-        <img src="pexels-clubhouseconvos-13620071.jpg" alt="" class="imageReveal"/>
+        <img src="pexels-pixabay-256150.jpg" alt="" class="imageReveal" />
         <div class="right-wrapper flex fcol">
           <div class="top flex">
             <div class="big-things flex fcol aic jcsb fadeUp">
               <h3>Big things can happen in small spaces.</h3>
-              <p>
-                With the thoughtful design and smart organisation, you can
-                maximise every inch,making room for creativity
-              </p>
-              <button class="button3">Details</button>
+              <p>With the thoughtful design and smart organisation, you can maximise every inch,making room for
+                creativity</p>
+              <button class="button-tertiary button-big">Details</button>
             </div>
             <div class="pricing flex fcol aic fadeInRightExtra">
               <img src="pexels-pacific-2179747.jpg" alt="">
               <p>Pricing starts at $256K</p>
-              <button class="button2 button-arrow">Explore Properties</button>
+              <button class="button-secondary button-arrow">Explore Properties</button>
             </div>
           </div>
           <div class="bottom">
@@ -148,16 +205,12 @@
   </section>
 
   <section id="property-list" class="properties">
-    <div class="properties-container">
-      <div class="heading fadeInLeft">
-        <h2 class="heading-h2">Explore our premium houses</h2>
-        <div class="pbut flex jcsb">
-          <p>
-            Each listing offers unique features, exceptional quality and prime
-            locations <br />ensuring an exclusive living experience
-          </p>
-          <button class="button2 button-arrow">See All Properties</button>
-        </div>
+    <div class="properties-container container">
+      <div class="heading">
+        <h2 class="heading-h2 fadeUp">Explore our premium houses</h2>
+        <p class="fadeUp">Each listing offers unique features, exceptional quality and prime locations <br />ensuring an
+          exclusive living experience</p>
+        <button class="button-primary button-arrow button-big fadeInLeft">See All Properties</button>
       </div>
 
       <template id="property-template">
@@ -165,11 +218,12 @@
           <div class="property-image">
             <img src="{{property.imgSrc}}" alt="{{property.title}}" />
           </div>
-          <span class="sale-status button1">{{property.saleStatus}}</span>
+          <span class="sale-status button-primary button">{{property.saleStatus}}</span>
           <div class="property-details">
-            <span>{{property.bedrooms}} &nbsp;• </span>&nbsp;<span>{{property.bathrooms}}</span>
-            <h3 class="property-title">{{property.title}}</h3>
-            <span><strong>{{property.price}}</strong></span> &nbsp;•&nbsp;
+            <span class="text-light-g">{{property.bedrooms}} &nbsp;• </span>&nbsp;<span
+              class="text-light-g">{{property.bathrooms}}</span>
+            <h3 class="property-title text-primary">{{property.title}}</h3>
+            <span class="property-price"><strong>{{property.price}}</strong></span> &nbsp;•&nbsp;
             <span class="property-address">{{property.address}}</span>
           </div>
         </div>
@@ -179,98 +233,35 @@
     </div>
   </section>
 
-  <!-- FAQ START -->
-  <!-- <section class="faq-section">
-    <div class="faq-container">
-      <h1 class="faq-title fadeInLeft">Frequently <span>Asked</span> Questions</h1>
-      <div class="faq-wrapper" id="faq-wrapper">
-        <div class="faq-item">
-          <div class="question">
-            <h3>What type of properties do you sell?</h3>
-          </div>
-          <div class="answer flex jcsb aic">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              consectetur nam quis vero possimus molestias cupiditate adipisci
-              asperiores vitae omnis obcaecati repellat quas, tempore
-              doloribus, veniam saepe. Minima atque iste ducimus nihil ea
-              repellendus eius, doloremque deleniti ipsa! Corporis quae quod
-              iure numquam possimus eaque. Quisquam nisi accusantium enim
-              dolores eum quae molestiae beatae eaque laboriosam molestias
-              consequatur, corporis aut.
-            </p>
-            <img src="pexels-expect-best-79873-323772.jpg" alt="" />
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="question">
-            <h3>What type of properties do you sell?</h3>
-          </div>
-          <div class="answer flex jcsb aic">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              consectetur nam quis vero possimus molestias cupiditate adipisci
-              asperiores vitae omnis obcaecati repellat quas, tempore
-              doloribus, veniam saepe. Minima atque iste ducimus nihil ea
-              repellendus eius, doloremque deleniti ipsa! Corporis quae quod
-              iure numquam possimus eaque. Quisquam nisi accusantium enim
-              dolores eum quae molestiae beatae eaque laboriosam molestias
-              consequatur, corporis aut.
-            </p>
-            <img src="pexels-pacific-2179747.jpg" alt="" />
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="question">
-            <h3>What type of properties do you sell?</h3>
-          </div>
-          <div class="answer flex jcsb aic">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              consectetur nam quis vero possimus molestias cupiditate adipisci
-              asperiores vitae omnis obcaecati repellat quas, tempore
-              doloribus, veniam saepe. Minima atque iste ducimus nihil ea
-              repellendus eius, doloremque deleniti ipsa! Corporis quae quod
-              iure numquam possimus eaque. Quisquam nisi accusantium enim
-              dolores eum quae molestiae beatae eaque laboriosam molestias
-              consequatur, corporis aut.
-            </p>
-            <img src="pexels-pacific-2179747.jpg" alt="" />
-          </div>
-        </div>
+  <section class="faq-section">
+    <div class="faq-container container">
+      <h1 class="faq-title heading-h2 fadeInLeft">Frequently <span class="colored">Asked</span> Questions</h1>
+      <div class="faq-wrapper" id="faq-container-wrap"></div>
+    </div>
+  </section>
+
+  <template id="faq-template">
+    <div class="faq-item">
+      <div class="question">{{question}}</div>
+      <div class="answer"
+        style="max-height: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.5s ease;">
+        <p>{{answer}}</p>
       </div>
     </div>
-  </section> -->
-  <!-- FAQ END -->
-
-<section class="faq-section">
-  <div class="faq-container">
-    <h1 class="faq-title fadeInLeft">Frequently <span>Asked</span> Questions</h1>
-    <div class="faq-wrapper" id="faq-container-wrap"></div>
-  </div>
-</section>
-
-<template id="faq-template">
-  <div class="faq-item">
-    <div class="question">{{question}}</div>
-    <div class="answer" style="max-height: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.5s ease;">
-      <p>{{answer}}</p>
-    </div>
-  </div>
-</template>
+  </template>
 
 
 
 
   <section class="testimonial">
-    <h2 class="testimonial__title fadeUp">What <br>Our Customers Say</h2>
+    <h2 class="heading-h2 fadeUp">What <br>Our <span class="colored">Customers </span>Say</h2>
 
-    <div class="testimonial__swiper container swiper">
+    <div class="testimonial__swiper  swiper">
       <div class="swiper-wrapper">
         <article class="testimonial__card swiper-slide">
           <img src="assets/img/avatar-1.png" alt="image" class="testimonial__img">
 
-          <h3 class="testimonial__name">Damyz Julz</h3>
+          <h3 class="testimonial__name text-primary">Damyz Julz</h3>
 
           <div class="testimonial__rating">
             <div class="testimonial__stars">
@@ -294,7 +285,7 @@
         <article class="testimonial__card swiper-slide">
           <img src="assets/img/avatar-2.png" alt="image" class="testimonial__img">
 
-          <h3 class="testimonial__name">Taylor Carter</h3>
+          <h3 class="testimonial__name text-primary">Taylor Carter</h3>
 
           <div class="testimonial__rating">
             <div class="testimonial__stars">
@@ -318,7 +309,7 @@
         <article class="testimonial__card swiper-slide">
           <img src="assets/img/avatar-3.png" alt="image" class="testimonial__img">
 
-          <h3 class="testimonial__name">Rina Ownel</h3>
+          <h3 class="testimonial__name text-primary">Rina Ownel</h3>
 
           <div class="testimonial__rating">
             <div class="testimonial__stars">
@@ -342,7 +333,7 @@
         <article class="testimonial__card swiper-slide">
           <img src="assets/img/avatar-4.png" alt="image" class="testimonial__img">
 
-          <h3 class="testimonial__name">Jhon Patel</h3>
+          <h3 class="testimonial__name text-primary">Jhon Patel</h3>
 
           <div class="testimonial__rating">
             <div class="testimonial__stars">
@@ -374,20 +365,19 @@
   </section>
 
 
-  <section class="cta">
+  <section class="cta container">
     <div class="overlay"></div>
     <div class="cta-container">
       <h2 class="cta-title fadeUp">Ready to Make Your Dream Property a Reality?</h2>
       <p class="cta-p fadeUp">Export a curated selection of properties that align with your vision and goals</p>
-      <button class="button2 button-arrow fadeIn">Get Started</button>
+      <button class="button-secondary button-arrow fadeIn">Get Started</button>
     </div>
   </section>
-  
+
   <footer class="footer">
     <div class="footer-container flex fcol jcsb">
       <div class="top flex aic jcsb">
-        <h2 class="footer-title fadeInLeftExtra" >Discover Nature's <span>Wonders <br>With Expert Guidance</span></h2>
-        <p class="fadeInRightExtra">12356 Main St., Gooding Jr Road,Kenya</p>
+        <h2 class="footer-title fadeInLeftExtra">Discover Nature's <span>Wonders <br>With Expert Guidance</span></h2>
       </div>
       <hr class="full-width-hr">
 
@@ -411,10 +401,14 @@
 
       <hr class="full-width-hr">
       <div class="footnote flex aic jcsb">
-        <p>&copy;
-          <script>document.write(new Date().getFullYear())</script> Greenstead. All Rights Reserved
+        <p>
+          <a href="">&copy; <script>document.write(new Date().getFullYear())</script> Greenstead | </a>
+          <a>All Rights Reserved</a>
         </p>
-        <p>Terms & Conditions | Privacy pilocy</p>
+        <p>
+          <a href="">Terms & Conditions </a>|
+          <a>Privacy Policy</a>
+        </p>
       </div>
     </div>
   </footer>
