@@ -35,7 +35,7 @@
 
       <!-- NAVBAR START  -->
       <nav class="navbar">
-        <div class="logo">Greenstead</div>
+        <div class="logo"><a href="/">Greenstead</a></div>
 
         <div class="hamburger">
           <span class="line"></span>
@@ -53,7 +53,7 @@
         </div>
         <div class="credentials flex aic jcsb">
           <div class="lang"></div>
-          <button class="login-btn button-tertiary">Login</button>
+          <button class="login-btn button-secondary">Login</button>
           <button class="sign-up button-primary">Sign Up</button>
         </div>
       </nav>
@@ -109,7 +109,7 @@
           <!-- <h3>Find the Best Place</h3> -->
           <form action="" class="filter-choices flex fg">
 
-            <!-- Location (Dropdown) -->
+            <!-- Location  -->
             <div class="filter-choice fcol">
               <label for="location" class="flex aic">
                 <i class="fas fa-map-marker-alt icon"></i> Location
@@ -126,29 +126,31 @@
               </div>
             </div>
 
-            <!-- Check-in (Input with caret) -->
+            <!-- Check-in -->
             <div class="filter-choice fcol">
               <label for="checkin" class="flex aic">
                 <i class="fas fa-calendar-alt icon"></i> Check-in
               </label>
               <div class="input-wrapper">
-                <input type="date" id="checkin" name="checkin" placeholder="Select date" />
+                <input type="date" id="checkin-native" name="checkin" hidden />
+                <input type="text" id="checkin" placeholder="Select date" readonly />
                 <span class="caret"><i class="fas fa-caret-down"></i></span>
               </div>
             </div>
 
-            <!-- Check-out (Input with caret) -->
+            <!-- Check-out -->
             <div class="filter-choice fcol">
               <label for="checkout" class="flex aic">
                 <i class="fas fa-calendar-alt icon"></i> Check-out
               </label>
               <div class="input-wrapper">
-                <input type="date" id="checkout" name="checkout" placeholder="Select date" />
+                <input type="date" id="checkout-native" name="checkout" hidden />
+                <input type="text" id="checkout" placeholder="Select date" readonly />
                 <span class="caret"><i class="fas fa-caret-down"></i></span>
               </div>
             </div>
 
-            <!-- Room & Guests (Dropdown) -->
+            <!-- Room & Guests -->
             <div class="filter-choice fcol">
               <label for="occupancy" class="flex aic">
                 <i class="fas fa-bed icon"></i> Rooms & Guests
@@ -178,7 +180,7 @@
     <div class="about-container container">
       <div class="header flex aic fadeUp">
         <h2 class="h2">Your primary home might begin to feel left out</h2>
-        <p class="heading-p p1">Each listing offers unique feature, exceptional quality, and prime locations</p>
+        <p class="heading-p p1">Each listing offers unique features, exceptional quality, and prime locations <span class="ellipsis1"> ...</span></p>
       </div>
       <div class="bottom flex">
         <img src="pexels-pixabay-256150.jpg" alt="" class="imageReveal" />
@@ -196,9 +198,7 @@
               <button class="button-secondary button-arrow">Explore Properties</button>
             </div>
           </div>
-          <div class="bottom">
-            <p>Whether it's creating a cozy corner for relaxation or transforming a small area into a workspace</p>
-          </div>
+            <p class="tar"><span class="ellipsis1">... </span>whether it's creating a cozy corner for relaxation or transforming a small area into a workspace</p>
         </div>
       </div>
     </div>

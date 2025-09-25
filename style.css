@@ -122,7 +122,7 @@ li {
 
 a {
   text-decoration: none;
-  /* color: var(--white); */
+  color: inherit;
 }
 button:hover, a:hover, button:focus, a:focus {
   outline: none;
@@ -208,6 +208,9 @@ button{
   .button-tertiary {
     padding: 10px 15px;
   }
+  .button-primary:hover, .button-secondary:hover, .button-tertiary:hover{
+    transform: scale(1.05);
+  }
 }
 
 .button-arrow {
@@ -252,8 +255,8 @@ button{
 
 .button-tertiary {
   background-color: transparent;
-  color: var(--50);
-  border: 2px solid var(--10);
+  color: var(--10);
+  border: 2px solid var(--20);
 }
 .button-tertiary:hover {
   background-color: var(--10) !important;
@@ -348,6 +351,15 @@ button{
 .jcsb {
   justify-content: space-between;
 }
+.tac{
+ text-align: center; 
+}
+.tal{
+  text-align: left;
+}
+.tar{
+  text-align: right;
+}
 .text-primary{
   color: var(--text-primary);
 }
@@ -362,6 +374,9 @@ button{
 }
 .p1{
   font-size: var(--p1);
+}
+.aib{
+  align-items: baseline;
 }
 @media (max-width: 600px) {
   :root {
@@ -880,12 +895,14 @@ button{
 }
 .logo {
   flex: 0 0 auto;
+   transition: all 0.3s ease;
 }
 .nav-menu {
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+   transition: all 0.3s ease;
 }
 
 /* Desktop credentials position */
@@ -915,6 +932,7 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 .nav-ul li a {
   display: inline-block;
@@ -1667,6 +1685,72 @@ select {
   position: relative;
   /* z-index: -34;  */
 }
+.ellipsis-container {
+  /* position: relative; makes child absolute relative to this container */
+  display: inline;
+  vertical-align: baseline;
+  line-height: inherit;
+}
+.ellipsis {
+  display: inline;
+  vertical-align: baseline;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-left: 0 0.2em;
+  font-size: 48px;
+  position: relative;
+  width: 1.2em;
+  text-align: left;
+  vertical-align: bottom;
+}
+.ellipsis1{
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: inherit;
+  line-height: inherit;
+  font-size: 40px;
+  color: var(--50);
+  height: 4px;
+  /* position: relative;
+  width: 1.2em;
+  text-align: left;
+  vertical-align: bottom; */
+}
+.ellipsis-end {
+  right: 35%;
+  bottom: 10px;
+}
+
+.ellipsis-start {
+  left: 200px;
+  top: 0;
+}
+
+.ellipsis::after {
+  content: '...';
+  position: absolute;
+  right: 0;
+  animation: ellipsisSteps 1.5s steps(3, end) infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+@keyframes ellipsisSteps {
+  0% {
+    width: 0;
+  }
+  33% {
+    width: 0.4em;
+  }
+  66% {
+    width: 0.8em;
+  }
+  100% {
+    width: 1.2em;
+  }
+}
+
 
 /* SECTION 3 */
 .properties {
@@ -1966,7 +2050,7 @@ select {
 /* CTA START  */
 .cta {
   width: 100%;
-  background-image: url(pexels-expect-best-79873-323772.jpg);
+  background-image: url(cta-hotel-1.jpg);
   background-position: center center;
   background-size: cover;
   max-height: 90vh;

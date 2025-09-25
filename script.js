@@ -6,49 +6,53 @@ function year() {
 
 
 // CHECK-In & CHECK-OUT DATES
+  // Utility functions
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  function formatInputDate(date) {
+    return date.toISOString().split('T')[0];
+  }
+  function formatDisplayDate(date) {
+    return date.toLocaleDateString('en-GB', options);
+  }
+
+  // Elements
   const checkinNative = document.getElementById('checkin-native');
   const checkoutNative = document.getElementById('checkout-native');
   const checkinInput = document.getElementById('checkin');
   const checkoutInput = document.getElementById('checkout');
 
-  function formatInputDate(date) {
-    return date.toISOString().split('T')[0];
-  }
-
-  const options = { day: '2-digit', month: 'short', year: 'numeric' };
-  function formatDisplayDate(date) {
-    return date.toLocaleDateString('en-GB', options);
-  }
-
+  // Dates in Date objects
   const today = new Date();
   const checkinDate = today;
   const checkoutDate = new Date(today);
   checkoutDate.setDate(today.getDate() + 3);
 
+  // Initialize native inputs with YYYY-MM-DD values
   checkinNative.value = formatInputDate(checkinDate);
-  checkinInput.value = formatDisplayDate(checkinDate);
   checkoutNative.value = formatInputDate(checkoutDate);
+  checkoutNative.min = formatInputDate(checkinDate);
+
+  // Initialize visible inputs with formatted dates
+  checkinInput.value = formatDisplayDate(checkinDate);
   checkoutInput.value = formatDisplayDate(checkoutDate);
+  checkinInput.placeholder = formatDisplayDate(checkinDate);
+  checkoutInput.placeholder = formatDisplayDate(checkoutDate);
 
-  checkinInput.addEventListener('click', () => {
-    checkinNative.showPicker();
-  });
-  checkoutInput.addEventListener('click', () => {
-    checkoutNative.showPicker();
-  });
+  // Open native pickers on visible input click
+  checkinInput.addEventListener('click', () => checkinNative.showPicker());
+  checkoutInput.addEventListener('click', () => checkoutNative.showPicker());
 
+  // Sync visible input when native changes
   checkinNative.addEventListener('input', () => {
-    const date = new Date(checkinNative.value);
-    checkinInput.value = formatDisplayDate(date);
+    const d = new Date(checkinNative.value);
+    checkinInput.value = formatDisplayDate(d);
     checkoutNative.min = checkinNative.value;
   });
 
   checkoutNative.addEventListener('input', () => {
-    const date = new Date(checkoutNative.value);
-    checkoutInput.value = formatDisplayDate(date);
+    const d = new Date(checkoutNative.value);
+    checkoutInput.value = formatDisplayDate(d);
   });
-
-  checkoutNative.min = formatInputDate(checkinDate);
 
 // END
 /* ====================================================== /
@@ -409,7 +413,7 @@ window.addEventListener("scroll", () => {
 
 const properties = [
   {
-    imgSrc: "pexels-clubhouseconvos-13620071.jpg",
+    imgSrc: "pexels-expect-best-79873-323772.jpg",
     saleStatus: "For Sale",
     bedrooms: "5 Bedrooms",
     bathrooms: "2 Bathrooms",
