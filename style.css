@@ -199,7 +199,7 @@ button{
   transition: all 0.5s ease;
 }
 .button-primary:hover, .button-secondary:hover, .button-tertiary:hover{
-  transform: scale(1.10);
+  transform: scale(1.2);
 }
 /* Responsive padding */
 @media (max-width: 768px) {
@@ -212,21 +212,23 @@ button{
 
 .button-arrow {
   color: inherit;
-  font-size: inherit;
+  /* font-size: inherit; */
   display: flex;
   align-items: center;
 }
 
 .button-arrow::after {
-  content: "»";
+  content: "\f178";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900; /*for solid */
   color: inherit;
-  font-size: inherit;
+  /* font-size: inherit; */
   margin-left: 5px;
   transition: all 0.3s ease;
 }
 
 .button-arrow:hover::after {
-  transform: translateX(5px) scale(1.05); /* arrow moves right on hover */
+  transform: translateX(10px) scale(1.25); /* arrow moves right on hover */
   color: inherit;
 }
 
@@ -1120,13 +1122,13 @@ li.active a {
 }
 .hero-heading{
   font-weight: 500 !important;
-  font-size: var(--h2);
+  font-size: var(--h2) !important;
   /* font-size: 84px !important; */
 }
 .hero-p{
-    max-width: 90ch;
-    font-size: 12px !important;
-    line-height: 28px;
+    max-width: 80ch;
+    font-size: 16px !important;
+    line-height: 36px;
 }
 
 .filter-modal {
@@ -1204,18 +1206,34 @@ li.active a {
 }
 
   .regal-filter {
-    background: var(--95);
+ /* background: linear-gradient(
+    to right,
+    var(--50),
+    rgba(181, 247, 142, 0.342) /* fully transparent version of light green /
+  ); */
+      /* Glassmorphism extras */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.041);
+
+    /* background: linear-gradient(45deg, (--36), var(--95)); */
     border-radius: 12px;
     padding: 2rem;
     max-width: 1200px;
     margin-inline: auto;
-    box-shadow: 0 0 20px var(--20);
+    /* box-shadow: 0 0 2px 1px hsla(87, 100%, 50%, 0.267); */
     color: var(--5);
     font-family: 'Georgia', serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    background-color: hsla(87, 100%, 95%, 0.6);
+      box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 10px 20px hsla(0, 0%, 100%, 0.05);
   }
 
   .regal-filter h3 {
@@ -1531,6 +1549,7 @@ select {
   text-align: center;
   padding: 80px 5px;
   border-radius: 30px;
+  gap: 20px;
   /* display: inline-block; */
   /* animation-delay: calc(var(--animation-delay-base-value) * 3); */
   animation-delay: 2s;

@@ -4,6 +4,53 @@ function year() {
   return date;
 }
 
+
+// CHECK-In & CHECK-OUT DATES
+  const checkinNative = document.getElementById('checkin-native');
+  const checkoutNative = document.getElementById('checkout-native');
+  const checkinInput = document.getElementById('checkin');
+  const checkoutInput = document.getElementById('checkout');
+
+  function formatInputDate(date) {
+    return date.toISOString().split('T')[0];
+  }
+
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  function formatDisplayDate(date) {
+    return date.toLocaleDateString('en-GB', options);
+  }
+
+  const today = new Date();
+  const checkinDate = today;
+  const checkoutDate = new Date(today);
+  checkoutDate.setDate(today.getDate() + 3);
+
+  checkinNative.value = formatInputDate(checkinDate);
+  checkinInput.value = formatDisplayDate(checkinDate);
+  checkoutNative.value = formatInputDate(checkoutDate);
+  checkoutInput.value = formatDisplayDate(checkoutDate);
+
+  checkinInput.addEventListener('click', () => {
+    checkinNative.showPicker();
+  });
+  checkoutInput.addEventListener('click', () => {
+    checkoutNative.showPicker();
+  });
+
+  checkinNative.addEventListener('input', () => {
+    const date = new Date(checkinNative.value);
+    checkinInput.value = formatDisplayDate(date);
+    checkoutNative.min = checkinNative.value;
+  });
+
+  checkoutNative.addEventListener('input', () => {
+    const date = new Date(checkoutNative.value);
+    checkoutInput.value = formatDisplayDate(date);
+  });
+
+  checkoutNative.min = formatInputDate(checkinDate);
+
+// END
 /* ====================================================== /
                         ANIMATIONS  END
     /* ======================================================= */
